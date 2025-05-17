@@ -56,9 +56,8 @@ SELECT
     a.created_at 
 FROM appointments a 
 JOIN users p ON a.patient_id = p.id 
-JOIN users d ON a.doctor_id = d.id;
-
--- 2. INDEXLER: Tarih ve durum alanlarına indeks 
+JOIN users d ON a.doctor_id = d.id; 
+ -- 2. INDEXLER: Tarih ve durum alanlarına indeks 
 CREATE INDEX idx_appointments_date ON appointments(date); 
 CREATE INDEX idx_appointments_status ON appointments(status); 
  -- 3. TRIGGERLAR: 
